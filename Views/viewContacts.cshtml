@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GALPALENDAR</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+
+    <h1>HERE ARE YOUR GALPALS</h1>
+    @if (@Model.Count == 0)
+    {
+  <h3>Whoa, bucko! You gotta find yourself some pals first!</h3>
+    }
+
+  <h3><a href='/addcontacts'>Add Some Gals</a></h3>
+
+  <ul>
+      @foreach (var pal in Model)
+      {
+      <li>
+        <h2>@CD.GetName()</h2>
+          <li>
+            <h4>@CD.GetNumber()</h4>
+          </li>
+          <li>
+            <h4>@CD.GetAddress()</h4>
+          </li>
+      </li>
+    }
+  </ul>
+
+  </body>
+</html>
