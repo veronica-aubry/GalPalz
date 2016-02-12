@@ -9,7 +9,7 @@ namespace Project
   {
     public HomeModule()
     {
-      Get["/"] = _ => View ["index.html"];
+      Get["/"] = _ => View ["index.cshtml"];
       //loads index view at root//
 
       Get["/add_contact"] = _ => {
@@ -33,12 +33,11 @@ namespace Project
     //gathers all contacts and uses list as model for page that lists all added contacts//
 
     Get["/contacts_cleared"] = _ => {
-    var allContacts = Contact.GetAllContacts();
-    allContacts.ClearAllContacts();
+    Contact.ClearAllContacts();
     return View["contactsCleared.cshtml"];
     };
 
-
+    //clears al contact objects//
 
     }
 

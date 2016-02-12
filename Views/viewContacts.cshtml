@@ -15,20 +15,22 @@
   <h3><a href='/add_contact'>Add Some Gals</a></h3>
   <h3><a href='/contacts_cleared'>DELETE ALL PALS</a></h3>
 
-  <ul>
+  <ol>
       @foreach (var pal in Model)
       {
       <li>
-        <h2>@CD.GetName()</h2>
+        <h2>@pal.GetName()</h2>
+        <ul>
           <li>
-            <h4>@CD.GetNumber()</h4>
+            <h4>@pal.GetNumber()</h4>
           </li>
           <li>
-            <h4>@CD.GetAddress()</h4>
+            <h4>@pal.GetAddress()</h4>
           </li>
+        </ul>
       </li>
     }
-  </ul>
+  </ol>
 
   </body>
 </html>
