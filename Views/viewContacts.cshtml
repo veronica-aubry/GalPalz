@@ -19,7 +19,7 @@
       @foreach (var pal in Model)
       {
       <li>
-        <h2>@pal.GetName()</h2>
+        <a href='contact/@pal.GetName()'><h2>@pal.GetName()</h2></a>
         <ul>
           <li>
             <h4>@pal.GetNumber()</h4>

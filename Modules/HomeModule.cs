@@ -39,7 +39,22 @@ namespace Project
 
     //clears al contact objects//
 
-    }
+    Get["/contact/{name}"] = parameters => {
+    var selectedContact = Contact.Find(parameters.name);
+    return View["contact.cshtml", selectedContact];
+    };
 
+  //generates page for specific contacts//
+
+    Get["/contact/{name}/clear"] = parameters => {
+    var selectedContact = Contact.Find(parameters.name);
+    Contact.ClearContact(selectedContact);
+    return View["contactCleared.cshtml"];
+    };
+
+  //deletes specific contact//
+
+
+    }
   }
 }

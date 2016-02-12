@@ -63,10 +63,16 @@ namespace Contacts.Objects
       return _id;
     }
 
-    public static Contact Find(int searchId)
+    public static Contact Find(string searchName)
     {
-      return _instances[searchId-1];
+      return _instances.Find(x => x._name.Contains(searchName));
     }
+
+    public static void ClearContact(Contact selected)
+   {
+      _instances.Remove(selected);
+
+   }
 
 //methods for all Contact objects//
 
