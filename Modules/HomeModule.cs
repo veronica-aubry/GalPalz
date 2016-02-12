@@ -32,7 +32,7 @@ namespace Project
 
     //gathers all contacts and uses list as model for page that lists all added contacts//
 
-    Get["/contacts_cleared"] = _ => {
+    Post["/contacts_cleared"] = _ => {
     Contact.ClearAllContacts();
     return View["contactsCleared.cshtml"];
     };

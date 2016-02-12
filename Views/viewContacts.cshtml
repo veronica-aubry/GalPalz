@@ -14,7 +14,6 @@
       }
 
     <h3><a href='/add_contact'>Add Some Gals</a></h3>
-    <h3><a href='/contacts_cleared'>DELETE ALL PALS</a></h3>
 
     <ol>
         @foreach (var pal in Model)
@@ -32,6 +31,10 @@
         </li>
       }
     </ol>
+    <form form action="/contacts_cleared" method="post">
+        <button type="submit">DELETE ALL PALS</button>
+    </form>
+
   </div>
 
   </body>
