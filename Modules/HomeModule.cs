@@ -37,7 +37,7 @@ namespace Project
     return View["contactsCleared.cshtml"];
     };
 
-    //clears al contact objects//
+    //clears all contact objects//
 
     Get["/contact/{name}"] = parameters => {
     var selectedContact = Contact.Find(parameters.name);

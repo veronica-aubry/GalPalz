@@ -3,14 +3,17 @@
   <head>
     <title>GALPALENDAR</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='Content/css/styles.css'>
   </head>
   <body>
-    <h1>CONGRATS, YOU HAVE A PAL! Pal added:</h1>
-    <h2>@Model.GetName()</h2>
-    <h3>@Model.GetNumber()</h3>
-    <h3>@Model.GetAddress()</h3>
+    <div class="container">
+      <h1>CONGRATS, YOU HAVE A PAL!</h1>
+      <h2>@Model.GetName()</h2>
+      <h3>@Model.GetNumber()</h3>
+      <h3>@Model.GetAddress()</h3>
 
-    <p><a href='/view_contacts'>View All of Your Pals</a></p>
-    <p><a href='/add_contact'>Add Some More Gals</a></p>
+      <p><a href='/view_contacts'>View All of Your Pals</a></p>
+      <p><a href='/add_contact'>Add Some More Gals</a></p>
+    </div>
   </body>
 </html>

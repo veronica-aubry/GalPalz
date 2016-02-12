@@ -3,13 +3,16 @@
   <head>
     <title>GALPALENDAR</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='Content/css/styles.css'>
   </head>
   <body>
-    <h1>@Model.GetName()</h1>
-    <h2>@Model.GetNumber()</h2>
-    <h2>@Model.GetAddress()</h2>
+    <div class="container">
+      <h1>@Model.GetName()</h1>
+      <h2>@Model.GetNumber()</h2>
+      <h2>@Model.GetAddress()</h2>
 
-    <p><a href='/view_contacts'>Back to All your Pals</a></p>
-    <p><a href="/contact/@Model.GetName()/clear">DELETE THIS PAL</a></p>
+      <p><a href='/view_contacts'>Back to All your Pals</a></p>
+      <p><a href="/contact/@Model.GetName()/clear">DELETE THIS PAL</a></p>
+    </div>
   </body>
 </html>

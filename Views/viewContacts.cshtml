@@ -3,34 +3,36 @@
   <head>
     <title>GALPALENDAR</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='Content/css/styles.css'>
   </head>
   <body>
-
+  <div class="container">
     <h1>HERE ARE YOUR GALPALS</h1>
     @if (@Model.Count == 0)
     {
-  <h3>Whoa, bucko! You gotta find yourself some pals first!</h3>
-    }
+    <h3>Whoa, bucko! You gotta find yourself some pals first!</h3>
+      }
 
-  <h3><a href='/add_contact'>Add Some Gals</a></h3>
-  <h3><a href='/contacts_cleared'>DELETE ALL PALS</a></h3>
+    <h3><a href='/add_contact'>Add Some Gals</a></h3>
+    <h3><a href='/contacts_cleared'>DELETE ALL PALS</a></h3>
 
-  <ol>
-      @foreach (var pal in Model)
-      {
-      <li>
-        <a href='contact/@pal.GetName()'><h2>@pal.GetName()</h2></a>
-        <ul>
-          <li>
-            <h4>@pal.GetNumber()</h4>
-          </li>
-          <li>
-            <h4>@pal.GetAddress()</h4>
-          </li>
-        </ul>
-      </li>
-    }
-  </ol>
+    <ol>
+        @foreach (var pal in Model)
+        {
+        <li>
+          <a href='contact/@pal.GetName()'><h2>@pal.GetName()</h2></a>
+          <ul>
+            <li>
+              <h4>@pal.GetNumber()</h4>
+            </li>
+            <li>
+              <h4>@pal.GetAddress()</h4>
+            </li>
+          </ul>
+        </li>
+      }
+    </ol>
+  </div>
 
   </body>
 </html>
